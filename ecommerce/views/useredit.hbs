@@ -1,0 +1,89 @@
+<style>
+    body {
+        background-image: url('/images/use.jpg'); /* Replace 'background-image.jpg' with your actual background image */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .container-fluid {
+        display: flex;
+        color: whitesmoke;
+        justify-content: first baseline;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    }
+
+    .card {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        
+    }
+
+    .card-title,
+    label {
+        color: whitesmoke;
+    }
+
+    .card-title {
+        border-bottom: 2px solid white;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+   
+
+    input,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+<div class="container-fluid">
+
+    <div class="card card-body3 "> 
+        <div class="card-title"> <h1>User Registration</h1></div>
+      <div class="card-body">
+        <form action="/editProfile/{{user._id}}" method="post" style="text-align: center;">
+<table>
+    <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" id="name" name="name" class="form-control" value="{{user.name}}" required></td>
+    </tr>
+    <tr>
+        <td><label for="contact">Contact:</label></td>
+        <td><input type="text" id="contact" name="contact" class="form-control" value="{{user.contact}}" required></td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <td><button type="submit" class="form-control btn btn-primary">Submit</button></td>
+    </tr>
+</table>
+
+    </form>
+      </div>
+    </div>
+  
+</div>

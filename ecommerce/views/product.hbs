@@ -1,0 +1,93 @@
+<style>
+  body {
+    background-image: url('/images/ecommerce.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  @media only screen and (max-width: 767px) {
+    body {
+      background-size: 100% 100%;
+    }
+  }
+
+  .mee{
+    margin-top: 10%;
+  }
+</style>
+
+<div class="container">
+
+    <div class="card" style=" background-color: transparent; border: 0px; margin-left: 25%; margin-top: 15%; color: whitesmoke;"> 
+        <div class="card-title"> <h1 style="text-align:justify;">Product Adding</h1></div>
+      <div class="card-body">
+        <form action="/pro1" method="post" enctype="multipart/form-data">
+<table>
+    <tr>
+        <td><label for="productName">Product Name:</label></td>
+        <td><input type="text" id="productName" name="productName" class="form-control" style="" required></td>
+    </tr>
+    <tr>
+        <td><label for="category">Category:</label></td>
+        <td>
+            <select id="category" name="category" class="form-control" required>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Home Appliances">Home Appliances</option>
+                
+            </select>
+        </td>
+    </tr>
+    <tr>
+    <td><label for="quantity">Quantity:</label></td>
+    <td><input type="number" id="quantity" name="quantity" class="form-control" style="" required oninput="calculateTotal()"></td>
+</tr>
+    <tr>
+    <td><label for="amount">Maximum Retail Price:</label></td>
+    <td><input type="number" id="amount" name="amount" class="form-control" style="" required oninput="calculateTotal()"></td>
+</tr>
+    <tr>
+        <td><label for="productDetails">Product Details:</label></td>
+        <td><textarea id="productDetails" name="productDetails" class="form-control" style="" required></textarea></td>
+    </tr>
+    <tr>
+    <td><label for="totalAmount">Total Amount:</label></td>
+    <td><input type="number" id="totalAmount" name="totalAmount" class="form-control" style="" readonly></td>
+</tr>
+    <tr>
+        <td><label for="image">Image:</label></td>
+        <td> <input type="file" id="image" name="image" accept="image/*" class="form-control" style="" required></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="submit" class="form-control btn btn-primary">Submit</button>
+        <a href="/merchant1" class="form-control btn btn-success mt-2">Back</a></td>
+    </tr>
+</table>
+
+    </form>
+      </div>
+    </div>
+  
+</div>
+
+
+<script>
+    function calculateTotal() {
+        // Get values from the input fields
+        var quantity = document.getElementById('quantity').value;
+        var amount = document.getElementById('amount').value;
+
+        // Calculate the total amount
+        var totalAmount = quantity * amount;
+
+        // Display the total amount in the totalAmount input field
+        document.getElementById('totalAmount').value = totalAmount;
+
+    }
+</script>

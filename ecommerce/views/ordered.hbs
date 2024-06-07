@@ -1,0 +1,138 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-image: url('/images/bg4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container1 {
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.7); /* Set the background color with alpha channel for transparency */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px); /* Apply a blur effect */
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+</style>
+
+
+
+{{>header2}}
+<div class="container-fluid container1">
+       <form action="/ordere" method="post">
+           <input type="hidden" name="producid"  value="{{product._id}}">
+            <input type="hidden" name="userid" value="{{userId}}">
+            <input type="hidden" name="merchantid" value="{{product.merchant_id}}">
+            <div class="form-group row">
+                <label for="quantity" class="col-sm-4 col-form-label">Quantity:</label>
+                <div class="col-sm-8">
+                    <input type="number" id="quantity" name="quantity" class="form-control" required oninput="calculateTotal(); quan();">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="totalAmount" class="col-sm-4 col-form-label">Total Amount:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="totalAmount" name="totalAmount" class="form-control" readonly>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="name" class="col-sm-4 col-form-label"> Your Name:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="name" class="col-sm-4 col-form-label"> Your Phone Number:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="mobile" name="mobile" class="form-control" required>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 col-form-label">Your Email:</label>
+                <div class="col-sm-8">
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="address" class="col-sm-4 col-form-label">Shipping Address:</label>
+                <div class="col-sm-8">
+                    <textarea id="address" name="address" class="form-control" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-group row mt-3">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-8">
+                    <button class="btn btn-success" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+<script>
+    function calculateTotal() {
+        // Get values from the input fields
+        var quantity = document.getElementById('quantity').value;
+        var amount = {{product.amount}};
+
+        // Calculate the total amount
+        var totalAmount = quantity * amount;
+
+        // Display the total amount in the totalAmount input field
+        document.getElementById('totalAmount').value = totalAmount;
+    }
+
+    function quan() {
+        // Get values from the input fields
+        var quantity = document.getElementById('quantity').value;
+        var proquan = {{product.quantity}};
+
+        if (proquan < quantity) {
+            window.alert("Enter a quantity less than or equal to " + {{product.quantity}});
+            document.getElementById('quantity').value = proquan; // Reset quantity to the maximum allowed
+            calculateTotal(); // Recalculate total amount
+        }
+    }
+</script>

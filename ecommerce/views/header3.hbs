@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <img src="/images/logo (2).png"  alt="">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-5" style="justify-content: end;" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item nav1">
+          <a class="nav-link active " aria-current="page" href="/adminn">Home</a>
+        </li>
+        <li class="nav-item nav1">
+          <a class="nav-link active " aria-current="page" href="/userdet">User Detail</a>
+        </li>
+        <li class="nav-item nav1">
+          <a class="nav-link active " aria-current="page" href="/merdtails">Merchant Registered</a>
+        </li>
+        <li class="nav-item nav1">
+          <a class="nav-link active " aria-current="page" href="/prolist">Product Register</a>
+        </li>
+        <li class="nav-item nav1">
+          <a class="nav-link active " aria-current="page" href="/admin/pendingMerchants">Merchant Approval</a>
+        </li>
+        <li class="nav-item nav1">
+          <a class="nav-link active " aria-current="page" href="/logout">logout</a>
+        </li>
+        
+        {{!-- <li class="nav-item dropdown nav1">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Registration
+          </a>
+          <ul class="dropdown-menu" style="background-color: transparent;">
+            <li><a class="dropdown-item" href="/user">User</a></li>
+            <li><a class="dropdown-item" href="/mee">Merchant</a></li>
+            
+          </ul>
+        </li> --}}
+        {{!-- <li class="nav-item dropdown nav1">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Login
+          </a>
+          <ul class="dropdown-menu" style="background-color: transparent;">
+            <li><a class="dropdown-item" href="/log">User</a></li>
+            <li><a class="dropdown-item" href="/log1">Merchant</a></li>
+            <li><a class="dropdown-item" href="/log2">Admin</a></li>
+            
+          </ul>
+        </li> --}}
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('sticky', window.scrollY > 0);
+  });
+</script>

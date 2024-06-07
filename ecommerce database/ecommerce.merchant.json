@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "65bb40a1d89760cc5689a253"
+  },
+  "name": "Suneer",
+  "address": "ff.hvh znkv kkz",
+  "district": "Thiruvananthapuram",
+  "aadhar": "1456877755",
+  "gender": "female",
+  "age": "20",
+  "contact": "8138877620",
+  "email": "suneer@gmail.com",
+  "password": "12345678"
+},
+{
+  "_id": {
+    "$oid": "65bb41a5f32646727d7dde13"
+  },
+  "name": "Maneesh",
+  "address": " reh   ",
+  "district": "Thiruvananthapuram",
+  "aadhar": "145687774564545",
+  "gender": "male",
+  "age": "23",
+  "contact": "906138720",
+  "email": "anandhu@gmail.com",
+  "password": "12345678"
+},
+{
+  "_id": {
+    "$oid": "65bb71524fa75b452cbdd254"
+  },
+  "name": "hari",
+  "address": " egsghwer",
+  "district": "Ernakulam",
+  "aadhar": "14451555",
+  "gender": "male",
+  "age": "18",
+  "contact": "888888888",
+  "email": "hari@gmail.com",
+  "password": "12345678"
+},
+{
+  "_id": {
+    "$oid": "65bbd6cea7dfa8e8cb249e59"
+  },
+  "name": "Maneesh",
+  "address": " dgbs",
+  "district": "Kollam",
+  "aadhar": "14568777551211",
+  "gender": "male",
+  "age": "25",
+  "contact": "87457847",
+  "email": "maneesh@gmail.com",
+  "password": "12345678"
+},
+{
+  "_id": {
+    "$oid": "65bbe680bb4c374e5bea2014"
+  },
+  "name": "Appu",
+  "address": " appnbbb",
+  "district": "Kottayam",
+  "aadhar": "458967517425655",
+  "gender": "male",
+  "age": "28",
+  "contact": "9846758945",
+  "email": "appu@gmail.com",
+  "password": "12345678"
+},
+{
+  "_id": {
+    "$oid": "65c1ccd311a3a1d71cf2024e"
+  },
+  "name": "Maneesh",
+  "address": " uhbu0h0",
+  "district": "Alappuzha",
+  "aadhar": "14568777551211",
+  "gender": "male",
+  "age": "25",
+  "contact": "8138877620",
+  "email": "maneesh@gmail.com",
+  "password": "12345678"
+}]

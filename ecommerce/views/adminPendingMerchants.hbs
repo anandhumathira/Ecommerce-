@@ -1,0 +1,68 @@
+<style>
+  body {
+    background-image: url('/images/bg-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  @media only screen and (max-width: 767px) {
+    body {
+      background-size: 100% 100%;
+    }
+  }
+
+  .mee{
+    margin-top: 15%;
+  }
+</style>
+
+{{>header3}}
+
+<div class="container gw">
+    <table class="table table-striped table-bordered table-dark mee">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>District</th>
+                <th>Aadhar</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each pendingMerchants}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{address}}</td>
+                    <td>{{district}}</td>
+                    <td>{{aadhar}}</td>
+                    <td>{{gender}}</td>
+                    <td>{{age}}</td>
+                    <td>{{contact}}</td>
+                    <td>{{email}}</td>
+                    <td>{{password}}</td>
+                    <td>
+                        <div class="btn-group" role="group">
+                            <form action="/admin/approveMerchant/{{_id}}" method="post">
+                                <button type="submit" class="btn btn-success">Approve</button>
+                            </form>
+                            <form action="/admin/rejectMerchant/{{_id}}" method="post">
+                                <button type="submit" class="btn btn-danger">Reject</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

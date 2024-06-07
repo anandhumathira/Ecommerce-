@@ -1,0 +1,73 @@
+<h1>{{ title }}</h1>
+
+  <form action="/merchantRegister" method="post">
+   <table>
+    <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" id="name" name="name" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="address">Address:</label></td>
+        <td><textarea id="address" name="address" class="form-control" required> </textarea></td>
+    </tr>
+    <tr>
+        <td><label for="district">District:</label></td>
+        <td>
+            <select id="district" name="district" class="form-control" required>
+                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                <option value="Kollam">Kollam</option>
+                <option value="Alappuzha">Alappuzha</option>
+                <option value="Pathanamthitta">Pathanamthitta</option>
+                <option value="Kottayam">Kottayam</option>
+                <option value="Idukki">Idukki</option>
+                <option value="Ernakulam">Ernakulam</option>
+                <option value="Thrissur">Thrissur</option>
+                <option value="Palakkad">Palakkad</option>
+                <option value="Malappuram">Malappuram</option>
+                <option value="Kozhikode">Kozhikode</option>
+                <option value="Wayanad">Wayanad</option>
+                <option value="Kannur">Kannur</option>
+                <option value="Kasaragod">Kasaragod</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="aadhar">Aadhar:</label></td>
+        <td><input type="text" id="aadhar" name="aadhar" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="age">Age:</label></td>
+        <td><input type="number" id="age" name="age" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="contact">Contact:</label></td>
+        <td><input type="text" id="contact" name="contact" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" name="email" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" id="password" name="password" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="submit" class="form-control btn btn-primary">Submit</button></td>
+    </tr>
+</table>
+    <button type="submit">Register</button>
+  </form>

@@ -1,0 +1,142 @@
+<style>
+    body {
+        background-image: url('/images/bg-1.jpg'); /* Replace 'background-image.jpg' with your actual background image */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    .container-fluid {
+        display: flex;
+        color: whitesmoke;
+        justify-content:center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    }
+
+    .card {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .card-title,
+    label {
+        color: whitesmoke;
+    }
+
+    .card-title {
+        border-bottom: 2px solid white;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+   
+
+    input,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        cursor: pointer;
+    }
+</style>
+<div class="container-fluid">
+
+    <div class="card card-body3 "> 
+        <div class="card-title"> <h1>Merchant
+ Registration</h1></div>
+      <div class="card-body">
+        <form action="/merchant/register" method="post" style="text-align: center;">
+<table>
+    <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" id="name" name="name" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="address">Address:</label></td>
+        <td><textarea id="address" name="address" class="form-control" required> </textarea></td>
+    </tr>
+    <tr>
+        <td><label for="district">District:</label></td>
+        <td>
+            <select id="district" name="district" class="form-control" required>
+                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                <option value="Kollam">Kollam</option>
+                <option value="Alappuzha">Alappuzha</option>
+                <option value="Pathanamthitta">Pathanamthitta</option>
+                <option value="Kottayam">Kottayam</option>
+                <option value="Idukki">Idukki</option>
+                <option value="Ernakulam">Ernakulam</option>
+                <option value="Thrissur">Thrissur</option>
+                <option value="Palakkad">Palakkad</option>
+                <option value="Malappuram">Malappuram</option>
+                <option value="Kozhikode">Kozhikode</option>
+                <option value="Wayanad">Wayanad</option>
+                <option value="Kannur">Kannur</option>
+                <option value="Kasaragod">Kasaragod</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="aadhar">Aadhar:</label></td>
+        <td><input type="text" id="aadhar" name="aadhar" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="gender">Gender:</label></td>
+        <td>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="age">Age:</label></td>
+        <td><input type="number" id="age" name="age" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="contact">Contact:</label></td>
+        <td><input type="text" id="contact" name="contact" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" name="email" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" id="password" name="password" class="form-control" required></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="submit" class="form-control btn btn-primary">Submit</button><a href="/" class="form-control btn btn-outline-success">Back</a></td>
+    </tr>
+</table>
+
+    </form>
+      </div>
+    </div>
+  
+</div>

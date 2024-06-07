@@ -1,0 +1,54 @@
+<!-- Add this CSS code to your existing styles -->
+<style>
+  .navbar.sticky .nav-item.dropdown:hover .dropdown-menu {
+    background-color: #333; /* Dark background color on hover */
+  }
+</style>
+
+<!-- Your existing HTML code -->
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <img src="/images/logo (2).png" alt="">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse me-5" style="justify-content: end;" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item nav1">
+            <a class="nav-link active " aria-current="page" href="/">Home</a>
+          </li>
+
+          <li class="nav-item dropdown nav1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Registration
+            </a>
+            <ul class="dropdown-menu" style="background-color: transparent;">
+              <li><a class="dropdown-item" href="/user">User</a></li>
+              <li><a class="dropdown-item" href="/merchant/register">Merchant</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown nav1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </a>
+            <ul class="dropdown-menu" style="background-color: transparent;">
+              <li><a class="dropdown-item" href="/log2">Admin</a></li>
+              <li><a class="dropdown-item" href="/log">User</a></li>
+              <li><a class="dropdown-item" href="/log1">Merchant</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('sticky', window.scrollY > 0);
+  });
+</script>

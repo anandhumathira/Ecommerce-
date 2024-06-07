@@ -1,0 +1,37 @@
+<style>
+    body {
+        background-image: url('/images/use.jpg'); /* Replace 'background-image.jpg' with your actual background image */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    .GGG{
+      margin-top: 25%;
+      background-color: cornsilk;
+    }
+</style>
+
+{{> header2}}
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card GGG" style="text-align: center;">
+        <div class="card-header">
+          <h2 class="mb-0">User Profile</h2>
+        </div>
+        <div class="card-body">
+          <div class="profile-details">
+           
+            <p class="mb-2"><strong>Name:</strong> {{user.name}}</p>
+            <p class="mb-2"><strong>Contact No:</strong> {{user.contact}}</p>
+            <p class="mb-2"><strong>Email:</strong> {{user.email}}</p>
+           
+            <a href="/useedit/{{user._id}}" class="btn btn-primary">Edit Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

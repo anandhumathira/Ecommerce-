@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #largeImage {
+      display: none;
+      max-width: 100%;
+      max-height: 100%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div id="gallery">
+  <img class="thumbnail" src="/images/firebolt.jpg" onclick="displayImage('/images/firebolt.jpg')" alt="Image 1">
+  <img class="thumbnail" src="/images/firebolt3.jpg" onclick="displayImage('/images/firebolt3.jpg')" alt="Image 2">
+  <img class="thumbnail" src="/images/firebolt2.jpg" onclick="displayImage('/images/firebolt2.jpg')" alt="Image 3">
+  
+</div>
+
+<div id="largeImage">
+  
+</div>
+
+<script>
+  function displayImage(largeImageUrl) {
+    var largeImage = document.getElementById('largeImage');
+    largeImage.innerHTML = '<img src="' + largeImageUrl + '" alt="Large Image">';
+    largeImage.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<style>
+  body {
+    background-image: url('/images/bg-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  @media only screen and (max-width: 767px) {
+    body {
+      background-size: 100% 100%;
+    }
+  }
+</style>
+
+
+
+{{>header3}}
+
+ <h1 class="mt-5" style="text-align: center;">Merchant Registered</h1>
+
+  <table class=" table table-dark mt-5">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>District</th>
+        <th>Aadhar</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <!-- Add more columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+       {{#each merchants}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td>{{this.address}}</td>
+          <td>{{this.district}}</td>
+          <td>{{this.aadhar}}</td>
+          <td>{{this.gender}}</td>
+          <td>{{this.age}}</td>
+          <td>{{this.contact}}</td>
+          <td>{{this.email}}</td>
+          <!-- Add more columns as needed -->
+        </tr>
+     {{/each}}
+    </tbody>
+  </table>
